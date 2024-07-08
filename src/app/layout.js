@@ -1,5 +1,10 @@
 import { Nunito } from 'next/font/google'
 import './globals.css'
+import Footer from '@/components/Footer'
+import AntdStyledComponentsRegistry from "@/components/AntdStyledComponentsRegistry";
+import LandingHeader from '@/components/LandingHeder'
+import styles from './page.module.scss'
+import 'animate.css';
 
 const inter = Nunito({ subsets: ['latin'] })
 
@@ -11,7 +16,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <AntdStyledComponentsRegistry>
+          <main className={styles.main}>
+            <LandingHeader />
+            {children}
+            <Footer />
+          </main>
+        </AntdStyledComponentsRegistry>
+      </body>
     </html>
   )
 }

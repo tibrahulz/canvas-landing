@@ -35,7 +35,9 @@ const CardContainer = () => {
           <pre className="card-title" style={{ textWrap: 'balance' }}>
             <h2 style={{ lineHeight: '22px' }}>{card.title}</h2>
           </pre>
-          <Paragraph className="card-description">{card.description}</Paragraph>
+          <Paragraph className="card-description" style={{
+            padding: '0 20px'
+          }}>{card.description}</Paragraph>
         </Card>
       ))}
     </div>

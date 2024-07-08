@@ -1,0 +1,90 @@
+.solutionMainDiv {
+  padding-top: 64px;
+
+  .container {
+    height: calc(80vh - 66px);
+    width: 100%;
+    position: relative;
+    background: url('../../../public/images/top-bg.svg');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .header {
+      // position: absolute;
+      // top: 10px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+
+      h1 {
+        text-align: center;
+        margin-bottom: 7px;
+        font-size: 32px;
+      }
+    }
+
+    .sticky {
+      // position: sticky;
+      overflow: hidden;
+      top: 0;
+      height: 100%;
+
+      .tabNav {
+        display: flex;
+        background-color: transparent;
+        padding: 10px 360px;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        justify-content: center;
+        margin-top: 20px;
+
+        div {
+          margin: 0 15px;
+          cursor: pointer;
+          color: #7b73ae;
+          font-size: 18px;
+          transition: background-color 0.3s;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          flex: 0 0 auto;
+          /* Make tabs not shrink */
+        }
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+
+      .tabCircle {
+        gap: 10px;
+
+        .iconContainer {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 10px;
+          background-color: #DDD;
+          border-radius: 100px;
+        }
+      }
+
+      .active {
+        color: #000;
+
+        .iconContainer {
+          background-color: #000;
+          color: #fff;
+        }
+
+        span {
+          color: #000;
+        }
+      }
+    }
+  }
+
+}

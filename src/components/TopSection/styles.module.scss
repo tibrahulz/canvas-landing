@@ -35,9 +35,10 @@
                 }
             }
             .imageContainer1 {
-              position: relative;
+              position: absolute;
               width: 700px;
               height: 550px;
+              // top: -75px;
               img{
                 object-fit: cover;
               }

@@ -4,22 +4,28 @@ import { useViewportScroll } from 'framer-motion';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import ScrollToPlugin from 'gsap/ScrollToPlugin';
-import CotentLock from '../../../public/images/content-suite.gif';
 import MicroLock from '../../../public/images/micro-lock.gif';
 import EmbedLock from '../../../public/images/embed-video.gif';
+import UploadGif from '../../../public/images/uploaded.gif';
+// import EarnGif from '../../../public/images/earn.mp4';
+import Custom from '../../../public/images/custom.gif';
 import Image from 'next/image';
+import styles from './solutions.module.scss';
 
 const { Title, Paragraph } = Typography;
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 const sections = [
-  { title: 'Content Suite', description: 'Earn from best parts of your text, audio, video, & images.', image: CotentLock },
-  { title: 'Micro Lock Logic', description: 'Maximize value for your content peaks using micro payments, promocodes or any other business logic.', image: MicroLock },
-  { title: 'Embed & Analytics', description: 'Extract data & customize consumer engagement, your way!', image: EmbedLock },
+  { title: 'UPLOAD', description: 'Drag, drop, add descriptions & upload.', image: UploadGif },
+  { title: 'ADD THE MICRO LOGIC', description: 'Lock the peaks of your content & build unique interactions.', image: MicroLock },
+  { title: 'CUSTOMIZE', description: 'Select from micro payments, promocodes, forms & more', image: Custom },
+  { title: 'EMBED', description: 'Extract your unique embed code to add on your website.', image: EmbedLock },
+  { title: 'EARN ', description: 'Earn audience engagement & build new revenue channels.', image: UploadGif },
 ];
 
-const Gateway = () => {
+
+const SolutionsContent = () => {
   const { scrollYProgress } = useViewportScroll();
   const containerRef = useRef(null);
   const rightContentRef = useRef(null);
@@ -44,8 +50,8 @@ const Gateway = () => {
     });
 
     tl.to(rightContentRef.current, {
-      y: () => window.innerHeight - (rightContentRef.current?.scrollHeight + 400 || 0),
-      ease: 'none',
+      y: () => window.innerHeight - (rightContentRef.current?.scrollHeight + 700 || 0),
+      ease: 'animate__animated animate__fadeOutUp ',
       duration: 3,
     });
 
@@ -87,12 +93,34 @@ const Gateway = () => {
   }, []);
 
   return (
-    <div style={{ height: '165vh', marginTop: '-10px' }}>
-      <div ref={containerRef} style={{ position: 'relative', paddingTop: 64 }}>
+    <div className={styles.solutions} style={{ height: '185vh', marginTop: '-10px' }}>
+      <div ref={containerRef} style={{ paddingTop: 64 }}>
         <Title level={2} style={{ textAlign: 'center' }}>THE STRIPE FOR THE WORLD OF MICRO GATEWAY</Title>
-        <div className="getway-container">
-          <div className="left-container">
-            <div className="left-content">
+        <div className={styles.getwayContainer}>
+          <div className={styles.rightContainer}>
+            <div className={styles.rightContent} ref={rightContentRef}>
+              {sections.map((num, index) => (
+                <div
+                  className={styles.rightElement}
+                  key={index}
+                  ref={(el) => (rightElementsRef.current[index] = el)}
+                >
+                  <Image
+                    src={num.image}
+                    style={{
+                      height: 450,
+                      width: 500,
+                      objectFit: 'contain'
+
+                    }}
+                    alt={num.title}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className={styles.leftContainer}>
+            <div className={styles.leftContent}>
               <ul>
                 {sections.map((section, index) => (
                   <li key={index} ref={(el) => (tabsRef.current[index] = el)}>
@@ -103,32 +131,10 @@ const Gateway = () => {
               </ul>
             </div>
           </div>
-          <div className="right-container bg-right">
-            <div className="right-content" ref={rightContentRef}>
-              {sections.map((num, index) => (
-                <div
-                  className="right-element"
-                  key={index}
-                  ref={(el) => (rightElementsRef.current[index] = el)}
-                >
-                  <Image
-                    src={num.image}
-                    style={{
-                      height: 450,
-                      width: 500,
-                      borderRadius: 20
-                    }}
-                    alt={num.title}
-                  />
-                  {/* <img src={num.image} alt="" height={450} width={385} /> */}
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
       </div>
     </div>
   )
 }
 
-export default Gateway
+export default SolutionsContent
