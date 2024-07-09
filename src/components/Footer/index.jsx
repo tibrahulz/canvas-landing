@@ -43,9 +43,9 @@ const Footer = () => {
           <Col lg={10} sm={24} xs={24}>
             <ul className="menu-list" >
               <div>
-                <h2 style={{ color: '#fff', fontSize: '26px', fontWeight: 600, marginBottom: 0 }}>24/7 customer support</h2>
-                <p style={{ marginTop: '10px' }}> Our customer support team is available to help 24/7. </p>
-                <Button className='ct-btn' style={{ marginTop: '70px', height: 40, width: 150, fontSize: 16 }}>
+                <h2 style={{ color: '#fff', fontSize: '26px', fontWeight: 600, marginBottom: 0, lineHeight: '32px' }}>5548, Abington Drive, Newark,<br />California, 94560</h2>
+                <p style={{ marginTop: '10px' }}>Email: Hello@canvas.space</p>
+                <Button className='ct-btn' style={{ marginTop: '35px', height: 40, width: 150, fontSize: 16 }}>
                   Contact Us
                 </Button>
               </div>

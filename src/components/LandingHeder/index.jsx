@@ -37,6 +37,7 @@ const LandingHeader = () => {
     {
       label: 'Pricing',
       key: 'pricing',
+      onClick: () => naviagteTo('/pricing')
     },
     {
       key: 'wallet',
