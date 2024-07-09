@@ -18,6 +18,8 @@ const pricing = [{
   id: 1,
   priceType: "Free",
   price: 0,
+  btnText: 'Currently Using',
+  btnDisabled: true,
   benefits: [{
     id: 'b-1',
     name: "One team per user",
@@ -32,6 +34,8 @@ const pricing = [{
   id: 2,
   priceType: "Pro",
   price: 80,
+  btnText: 'Upgrade',
+  btnDisabled: false,
   benefits: [{
     id: 'b-4',
     name: "Multiple teams",
@@ -69,9 +73,14 @@ export default function TopPricing() {
                 ✓ {b.name}
               </span>)}
             </div>
-            <Button type='primary' className={styles.buttonBottom}>
-              Upgrade
-            </Button>
+            <Flex justify='center'>
+              {price.btnDisabled ? <div className={styles.buttonBottom}>
+                <span style={{ color: '#00B3A6', fontSize: 18 }}>{price.btnText}</span>
+              </div> :
+                <Button type={'primary'} className={styles.buttonBottom}>
+                  {price.btnText}
+                </Button>}
+            </Flex>
           </div>)}
         </div>
       </div>

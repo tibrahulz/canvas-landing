@@ -1,11 +1,16 @@
 import styles from './styles.module.scss';
 import Picture1 from '../../../public/images/sec1.png';
 import Laptop from '../../../public/images/laptop-bg.png'
+import AudioGif from '../../../public/images/gifs/audio.gif'
+import VideoGif from '../../../public/images/gifs/video.gif'
+import TextGif from '../../../public/images/gifs/text.gif'
+import ImageGif from '../../../public/images/gifs/image.gif'
+
 import FirstSection from '../../../public/images/solution-1.gif'
 import Image from 'next/image';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import { useRef, useState } from 'react';
-import { Button, Flex, Typography } from 'antd';
+import { Button, Flex, Tooltip, Typography } from 'antd';
 import { RiPlayLargeFill } from "react-icons/ri";
 import { IoImagesOutline } from "react-icons/io5";
 import { TbSquareLetterT } from "react-icons/tb";
@@ -20,7 +25,7 @@ const tabs = [
       header: 'Audio',
       descriptionLine1: 'Sell seconds, melody, or high points.',
       descriptionLine2: 'Make every second count.',
-      imageUrl: FirstSection
+      imageUrl: AudioGif
     }
   },
   {
@@ -28,7 +33,7 @@ const tabs = [
       header: 'Video',
       descriptionLine1: 'Sell exclusive vlog or film sections. ',
       descriptionLine2: 'Make your stories compelling.',
-      imageUrl: FirstSection
+      imageUrl: VideoGif
     }
   },
   {
@@ -36,7 +41,7 @@ const tabs = [
       header: 'Image',
       descriptionLine1: 'Frame a focal point. Sell the heart of your art.',
       descriptionLine2: '',
-      imageUrl: FirstSection
+      imageUrl: ImageGif
     }
   },
   {
@@ -44,7 +49,7 @@ const tabs = [
       header: 'Text',
       descriptionLine1: 'Sell the best parts of your blog, research, or story cliffhangers.',
       descriptionLine2: 'Make every word matter.',
-      imageUrl: FirstSection
+      imageUrl: TextGif
     }
   },
   {
@@ -71,7 +76,9 @@ const Contact = ({
         <Title level={4} style={{ marginTop: 0, marginBottom: 30 }}>{descriptionLine1} {descriptionLine2}</Title>
         <Flex vertical={false} gap={10}>
           <Button type='primary'>Join For Free</Button>
-          <Button type='dashed'>Explore APIs</Button>
+          <Tooltip placement="top" title={`Coming soon...`}>
+            <Button type='dashed'>Explore APIs</Button>
+          </Tooltip>
         </Flex>
       </Flex>
       <Image

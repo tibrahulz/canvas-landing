@@ -16,7 +16,8 @@ const Content = ({
   count2,
   count2Label,
   totalLength,
-  setCurrentIndex
+  setCurrentIndex,
+  image
 }) => {
   return (
     <>
@@ -27,16 +28,16 @@ const Content = ({
         <Flex flex={1.5}>
           <div style={{ textAlign: 'left', paddingRight: 20 }}>
             <div style={{
-              width: 168,
-              height: 168,
+              width: 160,
+              height: 160,
               borderRadius: '50%',
-              backgroundColor: '#e0e0e0',
+              // backgroundColor: '#e0e0e0',
               marginBottom: '20px',
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'center'
             }}>
-              <Image src={CanvasLogo} alt="Logo" height={150} width={150} style={{ objectFit: 'contain' }} />
+              <Image src={image} alt="Logo" height={150} width={150} style={{ objectFit: 'contain' }} />
             </div>
             <Title level={4}>
               <b>{title}</b>

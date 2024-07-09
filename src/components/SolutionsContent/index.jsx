@@ -4,11 +4,12 @@ import { useViewportScroll } from 'framer-motion';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import ScrollToPlugin from 'gsap/ScrollToPlugin';
-import MicroLock from '../../../public/images/micro-lock.gif';
-import EmbedLock from '../../../public/images/embed-video.gif';
-import UploadGif from '../../../public/images/uploaded.gif';
-// import EarnGif from '../../../public/images/earn.mp4';
-import Custom from '../../../public/images/custom.gif';
+import MicroLock from '../../../public/images/gifs/lap-gif.gif';
+import EmbedLock from '../../../public/images/gifs/embed-gif.gif';
+import UploadGif from '../../../public/images/gifs/upload-gif.gif';
+// import UploadGif from '../../../public/images/uploaded.gif';
+import EarnGif from '../../../public/images/gifs/earn-gif.gif';
+import Custom from '../../../public/images/gifs/customize-gif.gif';
 import Image from 'next/image';
 import styles from './solutions.module.scss';
 
@@ -21,7 +22,7 @@ const sections = [
   { title: 'ADD THE MICRO LOGIC', description: 'Lock the peaks of your content & build unique interactions.', image: MicroLock },
   { title: 'CUSTOMIZE', description: 'Select from micro payments, promocodes, forms & more', image: Custom },
   { title: 'EMBED', description: 'Extract your unique embed code to add on your website.', image: EmbedLock },
-  { title: 'EARN ', description: 'Earn audience engagement & build new revenue channels.', image: UploadGif },
+  { title: 'EARN ', description: 'Earn audience engagement & build new revenue channels.', image: EarnGif },
 ];
 
 

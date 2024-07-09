@@ -4,9 +4,9 @@ import { useViewportScroll } from 'framer-motion';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import ScrollToPlugin from 'gsap/ScrollToPlugin';
-import CotentLock from '../../../public/images/content-suite.gif';
+import CotentLock from '../../../public/images/gifs/content-suite-gif.gif';
 import MicroLock from '../../../public/images/micro-lock.gif';
-import EmbedLock from '../../../public/images/embed-video.gif';
+import EmbedLock from '../../../public/images/gifs/embed-gif.gif';
 import Image from 'next/image';
 
 const { Title, Paragraph } = Typography;
@@ -116,7 +116,8 @@ const Gateway = () => {
                     style={{
                       height: 450,
                       width: 500,
-                      borderRadius: 20
+                      borderRadius: 20,
+                      objectFit: 'contain'
                     }}
                     alt={num.title}
                   />

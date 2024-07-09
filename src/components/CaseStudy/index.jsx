@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { Card, Row, Col, Typography, Button, Divider, Flex } from 'antd';
 import Content from './Content';
+import PodCastImg from '../../../public/images/podcast.svg'
+import MusicImg from '../../../public/images/music.svg'
+import BloggerImg from '../../../public/images/blogger.svg'
 import { LeftOutlined, RightOutlined } from '@ant-design/icons';
 
 const { Title, Text } = Typography;
@@ -13,7 +16,8 @@ const caseStudy = [{
   count1: "80+",
   count1Label: "Shows",
   count2: "50+",
-  count2Label: "increase in interactions"
+  count2Label: "increase in interactions",
+  image: PodCastImg
 }, {
   id: 2,
   title: "Canvas X Music Label, India",
@@ -22,7 +26,8 @@ const caseStudy = [{
   count1: "15000+",
   count1Label: "Artists",
   count2: "12.5%",
-  count2Label: "increase in revenue"
+  count2Label: "increase in revenue",
+  image: MusicImg
 }, {
   id: 3,
   title: "Canvas X Bloggers Community, India",
@@ -31,7 +36,8 @@ const caseStudy = [{
   count1: "10000+",
   count1Label: "Bloggers",
   count2: "15%",
-  count2Label: "increase in revenue"
+  count2Label: "increase in revenue",
+  image: BloggerImg
 }]
 
 const CaseStudyCard = () => {
