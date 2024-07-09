@@ -1,9 +1,7 @@
 'use client'
 import React from 'react'
-import TopSolutions from '@/components/TopSolutions';
-import SolutionsContent from '@/components/SolutionsContent';
-import styles from '../page.module.scss'
-import Footer from '@/components/Footer';
+import SolutionsContent from '../../components/SolutionsContent';
+import TopSolutions from '../../components/TopSolutions';
 
 const Solutions = () => {
   return (

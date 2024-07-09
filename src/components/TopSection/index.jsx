@@ -4,10 +4,12 @@ import Laptop from '../../../public/images/laptop-bg-new.png'
 import LockText from '../../../public/images/gifs/lap-gif.gif'
 import Image from 'next/image';
 import { useScroll, useTransform, motion } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { Button, Tooltip } from 'antd';
+import EarlyAccess from '../EarlyAccess';
 
 export default function TopSection() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -37,9 +39,13 @@ export default function TopSection() {
         <div className={styles.header}>
           <h1 style={{ textAlign: 'center', marginBottom: 7, fontSize: '32px' }}>Unlocking Dynamic Content Interactions</h1>
           <h4 style={{ textAlign: 'center', marginTop: 0, fontSize: '20px', fontWeight: 500 }}>Elevate Revenues and Engagement with the Micro Gateway</h4><div style={{ marginTop: 15 }}>
-            <Button type="primary" style={{ color: '#fff', height: 40, width: 150, fontSize: 16 }}>Get Early Access</Button>
+            <Button type="primary"
+              style={{ color: '#fff', height: 40, width: 150, fontSize: 16 }}
+              onClick={() => setIsModalOpen(true)}>
+              Get Early Access
+            </Button>
             <Tooltip placement="top" title={`Coming soon...`}>
-              <Button style={{ backgroundColor: 'transparent', border: '1px solid #000', marginLeft: 40, height: 40, width: 150, fontSize: 16 }}>
+              <Button disabled style={{ border: '1px solid #ccc', marginLeft: 20, height: 40, width: 150, fontSize: 16, borderRadius: 100, color: '#777' }}>
                 {`Explore APIs`}
               </Button>
             </Tooltip>
@@ -62,6 +68,7 @@ export default function TopSection() {
           }
         </div>
       </div>
+      <EarlyAccess setIsModalOpen={setIsModalOpen} isModalOpen={isModalOpen} />
     </div>
   )
 }

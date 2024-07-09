@@ -291,12 +291,13 @@ a {
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;
+  border-image: linear-gradient(95.16deg, #E37728 -0.76%, #F1E360 35.86%, #4AB061 61.94%, #0D76F2 105.71%) 1 1 round !important;
   text-fill-color: transparent !important;
 }
 
 
 .ct-btn:hover {
-  background: linear-gradient(95.16deg, #E37728 -0.76%, #F1E360 35.86%, #4AB061 61.94%, #0D76F2 105.71%) !important;
+  border-image: linear-gradient(95.16deg, #E37728 -0.76%, #F1E360 35.86%, #4AB061 61.94%, #0D76F2 105.71%) 1 1 round !important;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -304,8 +305,21 @@ a {
   color: #fff !important;
 }
 
-.ant-btn:hover {
+.ant-btn-primary {
+  border: 0 !important;
+  border-radius: 20px !important;
+  font-weight: 600 !important;
+  height: 40px !important;
+  width: 150px !important;
+  font-size: 16px !important;
+}
+
+.ant-btn-primary:hover {
   background: linear-gradient(95.16deg, #E37728 -0.76%, #F1E360 35.86%, #4AB061 61.94%, #0D76F2 105.71%) !important;
+  border-width: 1px;
+  border-style: solid;
+  background-position: top center, bottom center, center left, center right;
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
   /* -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

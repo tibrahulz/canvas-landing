@@ -2,14 +2,14 @@
 import styles from './page.module.scss'
 import { Suspense, useEffect, useState } from 'react';
 import Lenis from '@studio-freight/lenis'
-import LandingHeader from '@/components/LandingHeder';
-import Gateway from '@/components/Gateway';
-import CaseStudyCard from '@/components/CaseStudy';
-import CardContainer from '@/components/CardContainer';
+import LandingHeader from '../components/LandingHeder';
+import Gateway from '../components/Gateway';
+import CaseStudyCard from '../components/CaseStudy';
+import CardContainer from '../components/CardContainer';
 import { Button } from 'antd';
-import Footer from '@/components/Footer';
-import TopSection from '@/components/TopSection';
-import EarlyAccess from '@/components/EarlyAccess';
+import Footer from '../components/Footer';
+import TopSection from '../components/TopSection';
+import EarlyAccess from '../components/EarlyAccess';
 
 export default function Home() {
 

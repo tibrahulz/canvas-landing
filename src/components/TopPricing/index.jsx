@@ -1,18 +1,6 @@
 import styles from './styles.module.scss';
-import Picture1 from '../../../public/images/sec1.png';
-import Laptop from '../../../public/images/laptop-bg.png'
-import FirstSection from '../../../public/images/solution-1.gif'
-import Image from 'next/image';
-import { useScroll, useTransform, motion } from 'framer-motion';
-import { useRef, useState } from 'react';
-import { Button, Col, Flex, Row, Typography } from 'antd';
-import { RiPlayLargeFill } from "react-icons/ri";
-import { IoImagesOutline } from "react-icons/io5";
-import { TbSquareLetterT } from "react-icons/tb";
-import { FaLaptopCode } from "react-icons/fa";
-import { BsFillMicFill, BsPlayFill } from "react-icons/bs";
+import { Button, Flex } from 'antd';
 import { BsCurrencyDollar } from "react-icons/bs";
-
 
 const pricing = [{
   id: 1,

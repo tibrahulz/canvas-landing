@@ -1,59 +1,129 @@
-body,
-html,
-#root {
-  margin: 0;
-  padding: 0;
+html {
+  overflow-y: scroll;
   height: 100%;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
 }
 
-.section {
+body {
+  overflow-y: visible;
+  position: relative;
+  overflow-x: hidden;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+.container {
+  width: 600vw;
+  height: 100vh;
   display: flex;
+  flex-wrap: wrap;
+}
+
+.firstContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: yellow;
+}
+
+.lastContainer {
+  display: flex;
+  height: 100vh;
+  background: yellow;
+}
+
+.panel {
+  width: 100vw;
   height: 100vh;
 }
 
-.left,
-.right {
-  width: 50%;
-  overflow: hidden;
+.red {
+  background: blue;
 }
 
-.left {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.red {
+  background: red;
 }
 
-.left ul {
-  list-style: none;
-  padding: 0;
+.orange {
+  background: orange;
+}
+
+.purple {
+  background: purple;
+}
+
+.blue {
+  background-color: blue;
+}
+
+html {
+  overflow-y: scroll;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+}
+
+body {
+  overflow-y: visible;
+  position: relative;
+  overflow-x: hidden;
+}
+
+html,
+body {
   margin: 0;
 }
 
-.left li {
-  margin: 10px 0;
-  padding: 10px;
+.container {
+  width: 600vw;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.left li.active {
-  font-weight: bold;
+.firstContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: yellow;
 }
 
-.right {
-  position: relative;
+.lastContainer {
+  display: flex;
+  height: 100vh;
+  background: yellow;
 }
 
-.right .image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.panel {
+  width: 100vw;
+  height: 100vh;
 }
 
-.right img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.red {
+  background: blue;
+}
+
+.red {
+  background: red;
+}
+
+.orange {
+  background: orange;
+}
+
+.purple {
+  background: purple;
+}
+
+.blue {
+  background-color: blue;
 }

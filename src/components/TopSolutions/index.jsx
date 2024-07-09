@@ -62,6 +62,8 @@ const tabs = [
   }
 ];
 
+
+
 const Contact = ({
   info: {
     header,
@@ -75,9 +77,11 @@ const Contact = ({
         <Title level={3} style={{ fontWeight: 'bolder' }}>{header}</Title>
         <Title level={4} style={{ marginTop: 0, marginBottom: 30 }}>{descriptionLine1} {descriptionLine2}</Title>
         <Flex vertical={false} gap={10}>
-          <Button type='primary'>Join For Free</Button>
+          <Button type='primary'>Get Early Access</Button>
           <Tooltip placement="top" title={`Coming soon...`}>
-            <Button type='dashed'>Explore APIs</Button>
+            <Button disabled style={{ border: '1px solid #ccc', marginLeft: 10, height: 40, width: 150, fontSize: 16, borderRadius: 100, color: '#777' }}>
+              {`Explore APIs`}
+            </Button>
           </Tooltip>
         </Flex>
       </Flex>

@@ -1,8 +1,8 @@
 import { Nunito } from 'next/font/google'
 import './globals.css'
-import Footer from '@/components/Footer'
-import AntdStyledComponentsRegistry from "@/components/AntdStyledComponentsRegistry";
-import LandingHeader from '@/components/LandingHeder'
+import Footer from '../components/Footer'
+import AntdStyledComponentsRegistry from "../components/AntdStyledComponentsRegistry";
+import LandingHeader from '../components/LandingHeder'
 import styles from './page.module.scss'
 import 'animate.css';
 

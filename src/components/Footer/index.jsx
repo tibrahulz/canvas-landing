@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import { FaFacebook, FaInstagram, FaLinkedin, FaLinkedinIn, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { FaXTwitter } from "react-icons/fa6";
 import { SiYoutubemusic } from "react-icons/si";
-import EarlyAccess from '@/components/EarlyAccess';
+import EarlyAccess from '../EarlyAccess';
 
 const Footer = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);

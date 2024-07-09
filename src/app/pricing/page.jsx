@@ -1,6 +1,6 @@
 "use client"
 import React from 'react'
-import TopPricing from '@/components/TopPricing'
+import TopPricing from '../../components/TopPricing'
 
 const page = () => {
   return (

@@ -6,7 +6,7 @@ import { Layout, Menu, Button, Card, Row, Col, Space, MenuProps, Modal, Form, In
 import { PiCaretDownBold } from 'react-icons/pi';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import EarlyAccess from '@/components/EarlyAccess';
+import EarlyAccess from '../EarlyAccess';
 
 
 // import 'antd/dist/antd.css';
@@ -67,7 +67,7 @@ const LandingHeader = () => {
       display: 'flex',
       justifyContent: 'space-between',
       alignItems: 'center',
-      zIndex: 9
+      zIndex: 10
     }}>
       <Image
         src={CanvasLogo}

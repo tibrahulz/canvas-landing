@@ -22,6 +22,7 @@ const EarlyAccess = ({
       title="Just a Few Quick Details to Get Started!"
       open={isModalOpen}
       onOk={handleOk}
+      centered
       onCancel={handleCancel}
       footer={<></>}
       styles={{
