@@ -8,15 +8,16 @@ import CotentLock from '../../../public/images/gifs/content-suite-gif.gif';
 import MicroLock from '../../../public/images/micro-lock.gif';
 import EmbedLock from '../../../public/images/gifs/embed-gif.gif';
 import Image from 'next/image';
+import ReactPlayer from 'react-player';
 
 const { Title, Paragraph } = Typography;
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 const sections = [
-  { title: 'Content Suite', description: 'Earn from best parts of your text, audio, video, & images.', image: CotentLock },
-  { title: 'Micro Lock Logic', description: 'Maximize value for your content peaks using micro payments, promocodes or any other business logic.', image: MicroLock },
-  { title: 'Embed & Analytics', description: 'Extract data & customize consumer engagement, your way!', image: EmbedLock },
+  { title: 'Content Suite', description: 'Earn from best parts of your text, audio, video, & images.', image: '/videos/content-suite.mov' },
+  { title: 'Micro Lock Logic', description: 'Maximize value for your content peaks using micro payments, promocodes or any other business logic.', image: '/videos/lock-logic.mov' },
+  { title: 'Embed & Analytics', description: 'Extract data & customize consumer engagement, your way!', image: '/videos/embed.mov' },
 ];
 
 const Gateway = () => {
@@ -89,7 +90,7 @@ const Gateway = () => {
   return (
     <div style={{ height: '165vh', marginTop: '-10px' }}>
       <div ref={containerRef} style={{ position: 'relative', paddingTop: 64 }}>
-        <Title level={2} style={{ textAlign: 'center' }}>THE STRIPE FOR THE WORLD OF MICRO GATEWAY</Title>
+        <Title level={2} style={{ textAlign: 'center' }}>The Stripe For The World Of Micro Gateway</Title>
         <div className="getway-container">
           <div className="left-container">
             <div className="left-content">
@@ -111,16 +112,11 @@ const Gateway = () => {
                   key={index}
                   ref={(el) => (rightElementsRef.current[index] = el)}
                 >
-                  <Image
-                    src={num.image}
-                    style={{
-                      height: 450,
-                      width: 500,
-                      borderRadius: 20,
-                      objectFit: 'contain'
-                    }}
-                    alt={num.title}
-                  />
+                  <ReactPlayer url={num.image} height={'100%'} width={'100%'}
+                    playing
+                    loop
+                    autoPlay
+                    muted />
                   {/* <img src={num.image} alt="" height={450} width={385} /> */}
                 </div>
               ))}

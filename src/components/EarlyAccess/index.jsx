@@ -41,9 +41,9 @@ const EarlyAccess = ({
       }}
     >
       <label>Name:</label>
-      <Input />
+      <Input style={{ marginBottom: 20 }} />
       <label>Email:</label>
-      <Input />
+      <Input style={{ marginBottom: 20 }} />
       <Button type='primary' style={{ borderRadius: 20, marginTop: 20 }}>
         Submit
       </Button>

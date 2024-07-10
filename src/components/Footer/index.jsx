@@ -5,9 +5,12 @@ import { FaFacebook, FaInstagram, FaLinkedin, FaLinkedinIn, FaTwitter, FaYoutube
 import { FaXTwitter } from "react-icons/fa6";
 import { SiYoutubemusic } from "react-icons/si";
 import EarlyAccess from '../EarlyAccess';
+import { useResponsive } from '../../hooks/useResponsive';
 
 const Footer = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const { isTablet } = useResponsive();
+
   return (
     <footer className="footer">
       <div className="waves">
@@ -18,11 +21,11 @@ const Footer = () => {
       </div>
 
       <div className="footer-wrap">
-        <Row>
+        <Row style={{ textAlign: isTablet ? 'left' : 'center', padding: isTablet ? 0 : '0 25px' }}>
           <Col lg={10} sm={24} xs={24}>
-            <ul className="menu-list">
+            <ul className="menu-list" style={{ padding: isTablet ? '0 20px' : 0 }}>
               <div>
-                <h2 style={{ color: '#fff', fontSize: '26px', fontWeight: 600, marginBottom: 0 }}>Get Started for free</h2>
+                <h2 style={{ fontSize: '26px', fontWeight: 600, marginBottom: 0 }}>Get Started for free</h2>
                 <li className="menu__item">
                   <p style={{ marginTop: '10px' }}>About</p>
                 </li>
@@ -43,8 +46,8 @@ const Footer = () => {
           <Col lg={10} sm={24} xs={24}>
             <ul className="menu-list" >
               <div>
-                <h2 style={{ color: '#fff', fontSize: '26px', fontWeight: 600, marginBottom: 0, lineHeight: '32px' }}>5548, Abington Drive, Newark,<br />California, 94560</h2>
-                <p style={{ marginTop: '10px' }}>Email: Hello@canvas.space</p>
+                <h2 style={{ fontSize: '26px', fontWeight: 600, marginBottom: 0, lineHeight: '32px' }}>5548, Abington Drive, Newark,<br />California, 94560</h2>
+                <p style={{ marginTop: '10px' }}>hello@canvas.space</p>
                 <Button className='ct-btn' style={{ marginTop: '35px', height: 40, width: 150, fontSize: 16 }}>
                   Contact Us
                 </Button>

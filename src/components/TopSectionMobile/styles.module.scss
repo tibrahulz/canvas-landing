@@ -1,0 +1,74 @@
+.container {
+  height: 900px;
+  position: relative;
+  background: url('../../../public/images/top-bg.svg');
+  background-size: 100% 50%;
+
+  .header {
+    // position: absolute;
+    // top: 35px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    z-index: 9;
+    padding-top: 2rem;
+  }
+
+  .headerMobile {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    z-index: 9;
+    padding: 40px 25px;
+    box-sizing: border-box;
+  }
+
+  .sticky {
+    overflow: hidden;
+    padding-top: 10vh;
+
+    .el {
+      width: 100%;
+      top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .imageContainer {
+        position: relative;
+        width: 458px;
+        height: 260px;
+
+        img {
+          object-fit: cover;
+        }
+
+        video {
+          height: 100%;
+          width: 100%;
+        }
+      }
+
+
+      @media (max-width: 600px) {
+        .imageContainer {
+          width: 200px;
+          height: 180px;
+        }
+      }
+
+      .imageContainer1 {
+        position: absolute;
+        width: 100vw;
+        height: 550px;
+
+        // top: -75px;
+        img {
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

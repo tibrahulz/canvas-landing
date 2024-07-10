@@ -5,6 +5,8 @@ import AntdStyledComponentsRegistry from "../components/AntdStyledComponentsRegi
 import LandingHeader from '../components/LandingHeder'
 import styles from './page.module.scss'
 import 'animate.css';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const inter = Nunito({ subsets: ['latin'] })
 
@@ -14,6 +16,7 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+
   return (
     <html lang="en">
       <body className={inter.className}>

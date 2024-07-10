@@ -5,17 +5,27 @@ import Lenis from '@studio-freight/lenis'
 import LandingHeader from '../components/LandingHeder';
 import Gateway from '../components/Gateway';
 import CaseStudyCard from '../components/CaseStudy';
-import CardContainer from '../components/CardContainer';
+import Discover from '../components/Discover';
+import DiscoverMobile from '../components/DiscoverMobile';
+import CaseStudyCardMobile from '../components/CaseStudyCardMobile';
 import { Button } from 'antd';
 import Footer from '../components/Footer';
+import Featured from '../components/Featured';
 import TopSection from '../components/TopSection';
+import TopSectionMobile from '../components/TopSectionMobile';
 import EarlyAccess from '../components/EarlyAccess';
+import GatewayMobile from '../components/GatewayMobile'
+import { useResponsive } from '../hooks/useResponsive';
 
 export default function Home() {
 
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [domLoaded, setDomLoaded] = useState(false);
+  const { isTablet, isMobile } = useResponsive();
+
   useEffect(() => {
     const lenis = new Lenis()
+
+    setDomLoaded(true);
 
     function raf(time) {
       lenis.raf(time)
@@ -25,33 +35,57 @@ export default function Home() {
     requestAnimationFrame(raf)
   }, [])
 
+  const getTopSectionComp = () => {
+    if (isTablet) {
+      return <TopSection />
+    }
+    if (isMobile) {
+      return <TopSectionMobile />
+    }
+    return <></>
+  }
+
+  const getGatewayComp = () => {
+    if (isTablet) {
+      return <Gateway />
+    }
+    if (isMobile) {
+      return <GatewayMobile />
+    }
+    return <></>
+  }
+
+  const getTestimonialComp = () => {
+    if (isTablet) {
+      return <CaseStudyCard />
+    }
+    if (isMobile) {
+      return <CaseStudyCardMobile />
+    }
+    return <></>
+  }
+
+  const getDiscoverComp = () => {
+    if (isTablet) {
+      return <Discover />
+    }
+    if (isMobile) {
+      return <DiscoverMobile />
+    }
+    return <></>
+  }
+
+  if (!domLoaded) {
+    return <div style={{ height: '100vh' }}></div>
+  }
+
   return (
     <>
-      <TopSection />
-      <Gateway />
-      <CaseStudyCard />
-      <div style={{
-        height: "80vh"
-      }}>
-        <div style={{
-          width: '100%',
-          textAlign: 'center',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'space-between',
-          height: '80%',
-        }} className="bg-discover">
-          <h2 style={{ fontWeight: 'bolder', color: '#000' }}>DISCOVER THE MICRO ADVANTAGE</h2>
-          <CardContainer />
-          <div>
-            <h2 style={{ fontWeight: 'bolder', color: '#000' }}>The Future of Content Unlocking with Micro Precision Is Here</h2>
-            <Button type="primary" onClick={() => setIsModalOpen(true)}>
-              Get Early Access
-            </Button>
-          </div>
-        </div>
-        <EarlyAccess setIsModalOpen={setIsModalOpen} isModalOpen={isModalOpen} />
-      </div>
+      {getTopSectionComp()}
+      {getGatewayComp()}
+      {getTestimonialComp()}
+      {getDiscoverComp()}
+      {/* <Featured /> */}
     </>
   )
 }
