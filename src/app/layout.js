@@ -18,7 +18,6 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <link rel="shortcut icon" href="/public/images/logo.svg" />
       <body className={inter.className}>
         <AntdStyledComponentsRegistry>
           <main className={styles.main}>
