@@ -400,9 +400,9 @@ a {
 .featuringImageContainer {
   padding: 1rem;
   position: relative;
-  background-color: rgb(255, 255, 255);
+  /* background-color: rgb(255, 255, 255); */
   border-radius: 8px;
-  box-shadow: rgba(0, 0, 0, 0.09) 0px 1px 20px;
+  /* box-shadow: rgba(0, 0, 0, 0.09) 0px 1px 20px; */
   height: 120px;
   margin: 20px 20px;
   display: flex;
@@ -410,7 +410,7 @@ a {
   align-items: center;
   -webkit-box-pack: center;
   justify-content: center;
-  max-width: 300px;
+  max-width: 200px;
   width: auto !important;
 }
 
@@ -456,4 +456,8 @@ a {
   padding: 20px;
   /* display: flex;
   flex */
+}
+
+.hidden {
+  display: none;
 }

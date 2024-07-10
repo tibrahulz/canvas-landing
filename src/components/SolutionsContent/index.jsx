@@ -4,13 +4,6 @@ import { useViewportScroll } from 'framer-motion';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import ScrollToPlugin from 'gsap/ScrollToPlugin';
-import MicroLock from '../../../public/images/gifs/lap-gif.gif';
-import EmbedLock from '../../../public/images/gifs/embed-gif.gif';
-import UploadGif from '../../../public/images/gifs/upload-gif.gif';
-// import UploadGif from '../../../public/images/uploaded.gif';
-import EarnGif from '../../../public/images/gifs/earn-gif.gif';
-import Custom from '../../../public/images/gifs/customize-gif.gif';
-import Image from 'next/image';
 import styles from './solutions.module.scss';
 import ReactPlayer from 'react-player';
 
@@ -20,12 +13,11 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 const sections = [
   { title: 'UPLOAD', description: 'Drag, drop, add descriptions & upload.', image: '/videos/upload.mov' },
-  { title: 'ADD THE MICRO LOGIC', description: 'Lock the peaks of your content & build unique interactions.', image: '/videos/micro-lock.mov' },
+  { title: 'ADD THE MICRO LOGIC', description: 'Lock the peaks of your content & build unique interactions.', image: '/videos/lap-gif.mp4' },
   { title: 'CUSTOMIZE', description: 'Select from micro payments, promocodes, forms & more', image: '/videos/customize.mov' },
   { title: 'EMBED', description: 'Extract your unique embed code to add on your website.', image: '/videos/embed-sol.mov' },
   { title: 'EARN ', description: 'Earn audience engagement & build new revenue channels.', image: '/videos/earn.mov' },
 ];
-
 
 const SolutionsContent = () => {
   const { scrollYProgress } = useViewportScroll();
@@ -51,11 +43,11 @@ const SolutionsContent = () => {
       },
     });
 
-    tl.to(rightContentRef.current, {
-      y: () => window.innerHeight - (rightContentRef.current?.scrollHeight + 700 || 0),
-      ease: 'animate__animated animate__fadeOutUp ',
-      duration: 3,
-    });
+    // tl.to(rightContentRef.current, {
+    //   y: () => window.innerHeight - (rightContentRef.current?.scrollHeight + 700 || 0),
+    //   ease: 'animate__animated animate__fadeOutUp ',
+    //   duration: 3,
+    // });
 
     tabs.forEach((tab, i) => {
       const position = i / (amount - 1);
@@ -69,6 +61,22 @@ const SolutionsContent = () => {
           }
           tab.classList.toggle('selected');
           activeTab = i;
+          if (activeTab != undefined) {
+            rightElementsRef.current.forEach((tab, index) => {
+              console.log(":   activeTab === index", activeTab, index)
+              if (activeTab === index) {
+                rightElementsRef.current[index].style.display = "flex";
+              } else {
+                rightElementsRef.current[index].style.display = "none";
+              }
+            })
+            if (rightElementsRef.current[activeTab].classList.contains('animate__fadeInUpBig')) {
+              rightElementsRef.current[activeTab].classList.add('animate__animated', 'animate__fadeInDownBig');
+            } else {
+              rightElementsRef.current[activeTab].classList.add('animate__animated', 'animate__fadeInUpBig');
+            }
+            rightElementsRef.current[activeTab].scrollIntoView();
+          }
         },
         undefined,
         position
@@ -105,18 +113,9 @@ const SolutionsContent = () => {
                 <div
                   className={styles.rightElement}
                   key={index}
+                  // style={{ display: 'hidden' }}
                   ref={(el) => (rightElementsRef.current[index] = el)}
                 >
-                  {/* <Image
-                    src={num.image}
-                    style={{
-                      height: 450,
-                      width: 500,
-                      objectFit: 'contain'
-
-                    }}
-                    alt={num.title}
-                  /> */}
                   <ReactPlayer url={num.image} height={400} width={500}
                     playing
                     loop

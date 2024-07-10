@@ -15,6 +15,18 @@
     padding-top: 2rem;
   }
 
+  @media (max-height: 840px) {
+    .header {
+      top: 0;
+    }
+  }
+
+  @media (max-height: 700px) {
+    .header {
+      top: -35px;
+    }
+  }
+
   .headerMobile {
     position: absolute;
     top: 0;

@@ -82,7 +82,7 @@ const Contact = ({
             <Button type='primary'>Get Early Access</Button>
             <Tooltip placement="top" title={`Coming soon...`}>
               <Button disabled style={{ border: '1px solid #ccc', marginLeft: 10, height: 40, width: 150, fontSize: 16, borderRadius: 5, color: '#777' }}>
-                {`Explore APIs`}
+                {`Explore API's`}
               </Button>
             </Tooltip>
           </Flex>
@@ -118,7 +118,7 @@ const ContactMobile = ({
         <Button type='primary'>Get Early Access</Button>
         <Tooltip placement="top" title={`Coming soon...`}>
           <Button disabled style={{ border: '1px solid #ccc', marginLeft: 10, height: 40, width: 150, fontSize: 16, borderRadius: 5, color: '#777' }}>
-            {`Explore APIs`}
+            {`Explore API's`}
           </Button>
         </Tooltip>
       </Flex>

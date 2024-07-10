@@ -7,7 +7,7 @@ const { Title, Paragraph } = Typography;
 
 const sections = [
   { title: 'UPLOAD', description: 'Drag, drop, add descriptions & upload.', image: '/videos/upload.mov' },
-  { title: 'ADD THE MICRO LOGIC', description: 'Lock the peaks of your content & build unique interactions.', image: '/videos/lock-logic.mov' },
+  { title: 'ADD THE MICRO LOGIC', description: 'Lock the peaks of your content & build unique interactions.', image: '/videos/lap-gif.mp4' },
   { title: 'CUSTOMIZE', description: 'Select from micro payments, promocodes, forms & more', image: '/videos/customize.mov' },
   { title: 'EMBED', description: 'Extract your unique embed code to add on your website.', image: '/videos/embed-sol.mov' },
   { title: 'EARN ', description: 'Earn audience engagement & build new revenue channels.', image: '/videos/earn.mov' },

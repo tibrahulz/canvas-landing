@@ -24,7 +24,7 @@ const Discover = () => {
         <Featured />
 
         <div>
-          <h2 style={{ fontWeight: 'bolder', color: '#000' }}>The Future of Content Unlocking with Micro Precision Is Here</h2>
+          <h2 style={{ fontWeight: 'bolder', color: '#000', marginBottom: 40 }}>The Future of Content Unlocking with Micro Precision Is Here</h2>
           <Button type="primary" onClick={() => setIsModalOpen(true)}>
             Get Early Access
           </Button>

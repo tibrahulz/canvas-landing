@@ -18,7 +18,7 @@ const cardData = [
     icon: require('../../../public/images/rate-main.svg'),
   },
   {
-    title: 'Plugin-Ready APIs & Embeds',
+    title: "Plugin-Ready API's & Embeds",
     description: 'Discover the future of content engagements through a seemless modular API integration.',
     icon: require('../../../public/images/embed.svg'),
   },

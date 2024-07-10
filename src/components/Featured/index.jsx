@@ -46,8 +46,9 @@ const Featured = () => {
     autoplay: true,
     infinite: true,
     speed: 500,
-    slidesToShow: isTablet ? 4 : 1,
-    slidesToScroll: isTablet ? 4 : 1
+    slidesToShow: isTablet ? 5 : 1,
+    slidesToScroll: isTablet ? 5 : 1,
+    duration: 500
   };
 
 

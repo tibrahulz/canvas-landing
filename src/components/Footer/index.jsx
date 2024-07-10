@@ -28,12 +28,12 @@ const Footer = () => {
                 <h2 style={{ fontSize: '26px', fontWeight: 600, marginBottom: 0, lineHeight: '32px' }}>Get Started for free</h2>
                 {/* <h2 style={{ fontSize: '26px', fontWeight: 600, marginBottom: 0 }}>Get Started for free</h2> */}
                 <li className="menu__item">
-                  <p style={{ marginTop: '10px' }}>About</p>
+                  <p style={{ marginTop: '10px' }} onClick={() => window.open('https://canvas.space/about')}>About</p>
                 </li>
                 <li className="menu__item">
                   <p style={{ marginTop: '10px' }}>Contact us</p>
                 </li>
-                <li className="menu__item">
+                <li className="menu__item" onClick={() => window.open("https://canvas.space/moonshot")}>
                   <p style={{ marginTop: '10px' }}>Watch demo</p>
                 </li>
                 <Button type="primary" style={{ marginTop: '25px', height: 40, minWidth: 150, fontSize: 16 }}

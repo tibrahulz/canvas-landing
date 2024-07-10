@@ -29,6 +29,8 @@ const Gateway = () => {
 
   let activeTab = undefined;
 
+
+  // useGsap
   useEffect(() => {
     const tabs = gsap.utils.toArray(tabsRef.current);
     const amount = tabs.length;
@@ -44,11 +46,11 @@ const Gateway = () => {
       },
     });
 
-    tl.to(rightContentRef.current, {
-      y: () => window.innerHeight - (rightContentRef.current?.scrollHeight + 400 || 0),
-      ease: 'none',
-      duration: 3,
-    });
+    // tl.to(rightContentRef.current, {
+    //   y: () => window.innerHeight - (rightContentRef.current?.scrollHeight + 400 || 0),
+    //   ease: 'none',
+    //   duration: 3,
+    // });
 
     tabs.forEach((tab, i) => {
       const position = i / (amount - 1);
@@ -62,6 +64,24 @@ const Gateway = () => {
           }
           tab.classList.toggle('selected');
           activeTab = i;
+          if (activeTab != undefined) {
+            rightElementsRef.current.forEach((tab, index) => {
+              if (activeTab === index) {
+                rightElementsRef.current[index].classList.remove('hidden');
+                rightElementsRef.current[index].style.display = "flex";
+              } else {
+                rightElementsRef.current[index].classList.add('hidden');
+                // rightElementsRef.current[activeTab].classList.remove('animate__fadeInUpBig');
+                // rightElementsRef.current[activeTab].classList.add('animate__fadeOutUpBig');
+              }
+            })
+            if (rightElementsRef.current[activeTab].classList.contains('animate__fadeInUpBig')) {
+              rightElementsRef.current[activeTab].classList.add('animate__animated', 'animate__fadeInDownBig');
+            } else {
+              rightElementsRef.current[activeTab].classList.add('animate__animated', 'animate__fadeInUpBig');
+            }
+            rightElementsRef.current[activeTab].scrollIntoView();
+          }
         },
         undefined,
         position
@@ -108,16 +128,15 @@ const Gateway = () => {
             <div className="right-content" ref={rightContentRef}>
               {sections.map((num, index) => (
                 <div
-                  className="right-element"
+                  className="right-element hidden"
                   key={index}
                   ref={(el) => (rightElementsRef.current[index] = el)}
                 >
-                  <ReactPlayer url={num.image} height={'100%'} width={'100%'}
+                  <ReactPlayer url={num.image} height={400} width={'100%'}
                     playing
                     loop
                     autoPlay
                     muted />
-                  {/* <img src={num.image} alt="" height={450} width={385} /> */}
                 </div>
               ))}
             </div>
