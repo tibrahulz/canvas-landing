@@ -108,7 +108,7 @@ const LandingHeader = () => {
         />
         <Flex align='center' style={{ paddingRight: 40 }}>
           {menu}
-          <Button type="primary" style={{ color: '#fff', height: 40, width: 150, fontSize: '16px' }}
+          <Button type="primary" style={{ color: '#fff', height: 40, minWidth: 150, fontSize: '16px' }}
             onClick={() => setIsModalOpen(true)}>Get Early Access</Button>
         </Flex>
         <EarlyAccess setIsModalOpen={setIsModalOpen} isModalOpen={isModalOpen} />
@@ -162,7 +162,7 @@ const LandingHeader = () => {
             <Image alt="menu" src={MenuBtn} />
           </Dropdown>
 
-          <Button type="primary" style={{ color: '#fff', marginLeft: 20, height: 40, width: 150, fontSize: '16px' }}
+          <Button type="primary" style={{ color: '#fff', marginLeft: 20, height: 40, minWidth: 150, fontSize: '16px' }}
             onClick={() => setIsModalOpen(true)}>Get Early Access</Button>
 
         </div>

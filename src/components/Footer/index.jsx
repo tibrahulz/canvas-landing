@@ -25,7 +25,8 @@ const Footer = () => {
           <Col lg={10} sm={24} xs={24}>
             <ul className="menu-list" style={{ padding: isTablet ? '0 20px' : 0 }}>
               <div>
-                <h2 style={{ fontSize: '26px', fontWeight: 600, marginBottom: 0 }}>Get Started for free</h2>
+                <h2 style={{ fontSize: '26px', fontWeight: 600, marginBottom: 0, lineHeight: '32px' }}>Get Started for free</h2>
+                {/* <h2 style={{ fontSize: '26px', fontWeight: 600, marginBottom: 0 }}>Get Started for free</h2> */}
                 <li className="menu__item">
                   <p style={{ marginTop: '10px' }}>About</p>
                 </li>
@@ -35,7 +36,7 @@ const Footer = () => {
                 <li className="menu__item">
                   <p style={{ marginTop: '10px' }}>Watch demo</p>
                 </li>
-                <Button type="primary" style={{ marginTop: '5px', height: 40, width: 150, fontSize: 16 }}
+                <Button type="primary" style={{ marginTop: '25px', height: 40, minWidth: 150, fontSize: 16 }}
                   onClick={() => setIsModalOpen(true)}>
                   Get Early Access
                 </Button>
@@ -46,9 +47,33 @@ const Footer = () => {
           <Col lg={10} sm={24} xs={24}>
             <ul className="menu-list" >
               <div>
-                <h2 style={{ fontSize: '26px', fontWeight: 600, marginBottom: 0, lineHeight: '32px' }}>5548, Abington Drive, Newark,<br />California, 94560</h2>
+                <h2 style={{ fontSize: '26px', fontWeight: 600, marginBottom: 0, lineHeight: '32px' }}>Canvas Space Inc.</h2>
+                <p style={{ marginTop: '10px', fontSize: 16 }}>5548, Abington Drive, Newark,<br />California, 94560</p>
+                {/* <h2 style={{ fontSize: '26px', fontWeight: 600, marginBottom: 0, lineHeight: '32px' }}></h2> */}
                 <p style={{ marginTop: '10px' }}>hello@canvas.space</p>
-                <Button className='ct-btn' style={{ marginTop: '35px', height: 40, width: 150, fontSize: 16 }}>
+                <ul className="social-icon">
+                  <li className="social-icon__item"><a className="social-icon__link" href="#">
+                    <div style={{ height: 35, width: 35, borderRadius: 100, background: "transparent", display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                      <FaFacebook />
+                    </div>
+                  </a></li>
+                  <li className="social-icon__item"><a className="social-icon__link" href="#">
+                    <div style={{ height: 35, width: 35, borderRadius: 100, background: "transparent", display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                      <FaXTwitter />
+                    </div>
+                  </a></li>
+                  <li className="social-icon__item"><a className="social-icon__link" href="#">
+                    <div style={{ height: 35, width: 35, borderRadius: 100, background: "#777", display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                      <FaYoutube size={20} />
+                    </div>
+                  </a></li>
+                  <li className="social-icon__item"><a className="social-icon__link" href="#">
+                    <div style={{ height: 35, width: 35, borderRadius: 100, background: "#777", display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                      <FaLinkedinIn size={20} />
+                    </div>
+                  </a></li>
+                </ul>
+                <Button className='ct-btn' style={{ marginTop: '10px', height: 40, minWidth: 150, fontSize: 16 }}>
                   Contact Us
                 </Button>
               </div>
@@ -57,33 +82,11 @@ const Footer = () => {
         </Row>
       </div>
       <ul className="menu" style={{ marginTop: 25 }}>
-        <li className="menu__item"><a className="menu__link" href="#">Terms & Conditions</a></li>
-        <li className="menu__item"><a className="menu__link" href="#">Privacy Policy</a></li>
-        <li className="menu__item"><a className="menu__link" href="#">Terms of Use</a></li>
+        <li className="menu__item" style={{ marginBottom: 0 }}><a className="menu__link" href="#">Terms & Conditions</a></li>
+        <li className="menu__item" style={{ marginBottom: 0 }}><a className="menu__link" href="#">Privacy Policy</a></li>
+        <li className="menu__item" style={{ marginBottom: 0 }}><a className="menu__link" href="#">Terms of Use</a></li>
       </ul>
-      <ul className="social-icon">
-        <li className="social-icon__item"><a className="social-icon__link" href="#">
-          <div style={{ height: 35, width: 35, borderRadius: 100, background: "transparent", display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <FaFacebook />
-          </div>
-        </a></li>
-        <li className="social-icon__item"><a className="social-icon__link" href="#">
-          <div style={{ height: 35, width: 35, borderRadius: 100, background: "transparent", display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <FaXTwitter />
-          </div>
-        </a></li>
-        <li className="social-icon__item"><a className="social-icon__link" href="#">
-          <div style={{ height: 35, width: 35, borderRadius: 100, background: "#777", display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <FaYoutube size={20} />
-          </div>
-        </a></li>
-        <li className="social-icon__item"><a className="social-icon__link" href="#">
-          <div style={{ height: 35, width: 35, borderRadius: 100, background: "#777", display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <FaLinkedinIn size={20} />
-          </div>
-        </a></li>
-      </ul>
-      <p>&copy;2024 Canvas Space Inc. All rights reserved</p>
+      <p style={{ marginTop: 0 }}>&copy;2024 Canvas Space Inc. All rights reserved</p>
       <EarlyAccess setIsModalOpen={setIsModalOpen} isModalOpen={isModalOpen} />
     </footer>
   )
