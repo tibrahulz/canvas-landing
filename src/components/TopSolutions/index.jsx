@@ -150,7 +150,7 @@ export default function TopSolutions() {
     <div className={styles.solutionMainDiv}>
       <div ref={container} className={styles.container} style={{ height: !isTablet ? 'auto' : '' }}>
         <div className={styles.header}>
-          <h1>Explore our solutions</h1>
+          <h1>Explore our solutions </h1>
         </div>
         <div className={styles.sticky}>
           <div className={styles.tabNav} style={{ justifyContent: isTablet ? "center" : 'flex-start' }}>
