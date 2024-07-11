@@ -25,7 +25,7 @@ const GatewayMobile = () => {
   return (
     <div>
       <div style={{ padding: '0 25px' }}>
-        <Title level={2} style={{ textAlign: 'center', fontSize: 28, color: '#3a3939' }}>The Stripe For The World Of Micro Gateway</Title>
+        <Title level={2} style={{ textAlign: 'center', fontSize: 28, color: '#3a3939' }}>Your Micro Gateway to Untapped Content Potential</Title>
         {sections.map(section => <div key={section.id}
           style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', marginBottom: 20 }}
         >

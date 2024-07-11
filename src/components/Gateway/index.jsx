@@ -110,7 +110,7 @@ const Gateway = () => {
   return (
     <div style={{ height: '165vh', marginTop: '-10px' }}>
       <div ref={containerRef} style={{ position: 'relative', paddingTop: 64 }}>
-        <Title level={2} style={{ textAlign: 'center' }}>The Stripe For The World Of Micro Gateway</Title>
+        <Title level={2} style={{ textAlign: 'center' }}>Your Micro Gateway to Untapped Content Potential</Title>
         <div className="getway-container">
           <div className="left-container">
             <div className="left-content">

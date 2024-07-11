@@ -10,14 +10,14 @@ const sections = [
   { title: 'ADD THE MICRO LOGIC', description: 'Lock the peaks of your content & build unique interactions.', image: '/videos/lap-gif.mp4' },
   { title: 'CUSTOMIZE', description: 'Select from micro payments, promocodes, forms & more', image: '/videos/customize.mov' },
   { title: 'EMBED', description: 'Extract your unique embed code to add on your website.', image: '/videos/embed-sol.mov' },
-  { title: 'EARN ', description: 'Earn audience engagement & build new revenue channels.', image: '/videos/earn.mov' },
+  { title: 'EARN ', description: 'Earn audience engagement & build new revenue channels.', image: '/videos/earn-main-sol.mp4' },
 ];
 
 const SolutionsContentMobile = () => {
   return (
     <div style={{}}>
       <div style={{ padding: '40px 25px 120px' }}>
-        <Title level={2} style={{ textAlign: 'center' }}>The Stripe For The World Of Micro Gateway</Title>
+        <Title level={2} style={{ textAlign: 'center' }}>Elevating Content Interactions through Micro Gateway</Title>
         {sections.map(section => <div key={section.id}
           style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', marginBottom: 20 }}
         >

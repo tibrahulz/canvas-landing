@@ -16,6 +16,7 @@ import TopSectionMobile from '../components/TopSectionMobile';
 import EarlyAccess from '../components/EarlyAccess';
 import GatewayMobile from '../components/GatewayMobile'
 import { useResponsive } from '../hooks/useResponsive';
+import { Helmet } from "react-helmet";
 
 export default function Home() {
 
@@ -81,6 +82,9 @@ export default function Home() {
 
   return (
     <>
+      {/* <Helmet>
+        <title>Your Micro Gateway to Untapped Content Potential</title>
+      </Helmet> */}
       {getTopSectionComp()}
       {getGatewayComp()}
       {getTestimonialComp()}

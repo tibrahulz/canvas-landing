@@ -36,16 +36,6 @@ export default function TopSectionMobile() {
         <div className={(isDesktop || isTablet) ? styles.header : styles.headerMobile}>
           <h1 style={{ textAlign: 'center', marginBottom: 7, fontSize: '32px' }}>Unlocking Dynamic Content Interactions</h1>
           <h4 style={{ textAlign: 'center', marginTop: 0, fontSize: '20px', fontWeight: 500 }}>Elevate Revenues and Engagement with the Micro Gateway</h4><div style={{ marginTop: 15 }}>
-            {/* <Button type="primary"
-              style={{ color: '#fff', height: 40, width: 150, fontSize: 16 }}
-              onClick={() => setIsModalOpen(true)}>
-              Get Early Access
-            </Button>
-            <Tooltip placement="top" title={`Coming soon...`}>
-              <Button disabled style={{ border: '1px solid #ccc', marginLeft: 20, height: 40, width: 150, fontSize: 16, borderRadius: 5, color: '#777' }}>
-                {`Explore APIs`}
-              </Button>
-            </Tooltip> */}
           </div>
         </div>
         <div className={styles.sticky}>

@@ -18,6 +18,7 @@ import { FaLaptopCode } from "react-icons/fa";
 import { BsFillMicFill, BsPlayFill } from "react-icons/bs";
 import { useResponsive } from '../../hooks/useResponsive';
 import ReactPlayer from 'react-player';
+import EarlyAccess from '../EarlyAccess';
 
 const { Title } = Typography;
 
@@ -27,7 +28,7 @@ const tabs = [
       header: 'Audio',
       descriptionLine1: 'Sell seconds, melody, or high points.',
       descriptionLine2: 'Make every second count.',
-      imageUrl: '/videos/audio.mov'
+      imageUrl: '/videos/audio-main-sol.mov'
     }
   },
   {
@@ -35,7 +36,7 @@ const tabs = [
       header: 'Video',
       descriptionLine1: 'Sell exclusive vlog or film sections. ',
       descriptionLine2: 'Make your stories compelling.',
-      imageUrl: '/videos/video.mov'
+      imageUrl: '/videos/video-main-sol.mov'
     }
   },
   {
@@ -43,7 +44,7 @@ const tabs = [
       header: 'Image',
       descriptionLine1: 'Frame a focal point. Sell the heart of your art.',
       descriptionLine2: '',
-      imageUrl: '/videos/image.mov'
+      imageUrl: '/videos/image-main-sol.mov'
     }
   },
   {
@@ -51,7 +52,7 @@ const tabs = [
       header: 'Text',
       descriptionLine1: 'Sell the best parts of your blog, research, or story cliffhangers.',
       descriptionLine2: 'Make every word matter.',
-      imageUrl: '/videos/text.mov'
+      imageUrl: '/videos/text-main-sol.mov'
     }
   },
   {
@@ -72,6 +73,7 @@ const Contact = ({
     imageUrl
   }
 }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <div key={header} className="content-car animate__animated animate__fadeInUp">
       <Flex vertical={false} align='center' justify='center' gap={'5vw'} style={{ textAlign: 'left' }}>
@@ -79,7 +81,7 @@ const Contact = ({
           <Title level={3} style={{ fontWeight: 'bolder' }}>{header}</Title>
           <Title level={4} style={{ marginTop: 0, marginBottom: 30 }}>{descriptionLine1} {descriptionLine2}</Title>
           <Flex vertical={false} gap={10}>
-            <Button type='primary'>Get Early Access</Button>
+            <Button type='primary' onClick={() => setIsModalOpen(true)}>Get Early Access</Button>
             <Tooltip placement="top" title={`Coming soon...`}>
               <Button disabled style={{ border: '1px solid #ccc', marginLeft: 10, height: 40, width: 150, fontSize: 16, borderRadius: 5, color: '#777' }}>
                 {`Explore API's`}
@@ -93,6 +95,7 @@ const Contact = ({
           autoPlay
           muted />
       </Flex>
+      <EarlyAccess setIsModalOpen={setIsModalOpen} isModalOpen={isModalOpen} />
     </div>
   )
 };
@@ -105,6 +108,7 @@ const ContactMobile = ({
     imageUrl
   }
 }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return <div key={header} className="content-car animate__animated animate__fadeInUp" style={{ paddingTop: 5 }}>
     <Flex vertical={true} align='center' justify='center' style={{ textAlign: 'center', padding: '0 25px' }}>
       <Title level={3} style={{ fontWeight: 'bolder' }}>{header}</Title>
@@ -115,7 +119,7 @@ const ContactMobile = ({
         autoPlay
         muted />
       <Flex vertical={false} gap={10}>
-        <Button type='primary'>Get Early Access</Button>
+        <Button type='primary' onClick={() => setIsModalOpen(true)}>Get Early Access</Button>
         <Tooltip placement="top" title={`Coming soon...`}>
           <Button disabled style={{ border: '1px solid #ccc', marginLeft: 10, height: 40, width: 150, fontSize: 16, borderRadius: 5, color: '#777' }}>
             {`Explore API's`}
@@ -123,6 +127,7 @@ const ContactMobile = ({
         </Tooltip>
       </Flex>
     </Flex>
+    <EarlyAccess setIsModalOpen={setIsModalOpen} isModalOpen={isModalOpen} />
   </div>
 }
 

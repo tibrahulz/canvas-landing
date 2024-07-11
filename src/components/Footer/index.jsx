@@ -7,6 +7,28 @@ import { SiYoutubemusic } from "react-icons/si";
 import EarlyAccess from '../EarlyAccess';
 import { useResponsive } from '../../hooks/useResponsive';
 
+const footerInfo = {
+  // navList: [
+  //   { text: 'About', route: appRoutes.ABOUT },
+  //   { text: 'Report Issue', route: 'mailto:support@canvas.space' },
+  //   { text: 'Blogs', route: appRoutes.BLOGS },
+  //   { text: 'Terms & Condition', route: appRoutes.PRIVACY },
+  //   { text: 'Privacy Policy', route: appRoutes.PRIVACY },
+  //   {
+  //     text: 'Terms of Use',
+  //     route:
+  //       'https://drive.google.com/file/d/1eiNbNjT0eSofdUyvLulrfy6Ov4NrABjn/view'
+  //   }
+  // ],
+  // customClassName: '',
+  // footer_logo,
+  // subDomain: false,
+  facebook: 'https://www.facebook.com/canvsspace/',
+  twitter: 'https://x.com/CanvasSpace',
+  linkedIn: 'https://www.linkedin.com/company/canvas-space/',
+  youtube: 'https://www.youtube.com/@canvas_space/playlists'
+}
+
 const Footer = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { isTablet } = useResponsive();
@@ -52,28 +74,28 @@ const Footer = () => {
                 {/* <h2 style={{ fontSize: '26px', fontWeight: 600, marginBottom: 0, lineHeight: '32px' }}></h2> */}
                 <p style={{ marginTop: '10px' }}>hello@canvas.space</p>
                 <ul className="social-icon">
-                  <li className="social-icon__item"><a className="social-icon__link" href="#">
+                  <li className="social-icon__item"><a href={footerInfo.facebook} className="social-icon__link">
                     <div style={{ height: 35, width: 35, borderRadius: 100, background: "transparent", display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                       <FaFacebook />
                     </div>
                   </a></li>
-                  <li className="social-icon__item"><a className="social-icon__link" href="#">
+                  <li className="social-icon__item"><a href={footerInfo.twitter} className="social-icon__link">
                     <div style={{ height: 35, width: 35, borderRadius: 100, background: "transparent", display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                       <FaXTwitter />
                     </div>
                   </a></li>
-                  <li className="social-icon__item"><a className="social-icon__link" href="#">
+                  <li className="social-icon__item"><a href={footerInfo.youtube} className="social-icon__link">
                     <div style={{ height: 35, width: 35, borderRadius: 100, background: "#777", display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                       <FaYoutube size={20} />
                     </div>
                   </a></li>
-                  <li className="social-icon__item"><a className="social-icon__link" href="#">
+                  <li className="social-icon__item"><a href={footerInfo.linkedIn} className="social-icon__link">
                     <div style={{ height: 35, width: 35, borderRadius: 100, background: "#777", display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                       <FaLinkedinIn size={20} />
                     </div>
                   </a></li>
                 </ul>
-                <Button className='ct-btn' style={{ marginTop: '10px', height: 40, minWidth: 150, fontSize: 16 }}>
+                <Button className='ct-btn' style={{ marginTop: '10px', height: 40, minWidth: 150, fontSize: 16 }} onClick={() => window.open("mailto:hello@canvas.space")}>
                   Contact Us
                 </Button>
               </div>

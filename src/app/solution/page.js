@@ -4,6 +4,7 @@ import SolutionsContent from '../../components/SolutionsContent';
 import SolutionsContentMobile from '../../components/SolutionsContentMobile';
 import TopSolutions from '../../components/TopSolutions';
 import { useResponsive } from '../../hooks/useResponsive';
+import Head from 'next/head';
 
 const Solutions = () => {
   const { isTablet, isMobile } = useResponsive();
@@ -20,6 +21,9 @@ const Solutions = () => {
 
   return (
     <>
+      <Head>
+        <title>Elevating Content Interactions through Micro Gateway</title>
+      </Head>
       <TopSolutions />
       {getContentComp()}
     </>

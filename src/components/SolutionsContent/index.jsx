@@ -16,7 +16,7 @@ const sections = [
   { title: 'ADD THE MICRO LOGIC', description: 'Lock the peaks of your content & build unique interactions.', image: '/videos/lap-gif.mp4' },
   { title: 'CUSTOMIZE', description: 'Select from micro payments, promocodes, forms & more', image: '/videos/customize.mov' },
   { title: 'EMBED', description: 'Extract your unique embed code to add on your website.', image: '/videos/embed-sol.mov' },
-  { title: 'EARN ', description: 'Earn audience engagement & build new revenue channels.', image: '/videos/earn.mov' },
+  { title: 'EARN ', description: 'Earn audience engagement & build new revenue channels.', image: '/videos/earn-main-sol.mp4' },
 ];
 
 const SolutionsContent = () => {
@@ -105,7 +105,7 @@ const SolutionsContent = () => {
   return (
     <div className={styles.solutions} style={{ height: '185vh', marginTop: '-10px' }}>
       <div ref={containerRef} style={{ paddingTop: 64 }}>
-        <Title level={2} style={{ textAlign: 'center' }}>THE STRIPE FOR THE WORLD OF MICRO GATEWAY</Title>
+        <Title level={2} style={{ textAlign: 'center' }}>Elevating Content Interactions through Micro Gateway</Title>
         <div className={styles.getwayContainer}>
           <div className={styles.rightContainer}>
             <div className={styles.rightContent} ref={rightContentRef}>

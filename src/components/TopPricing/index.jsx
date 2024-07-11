@@ -88,7 +88,7 @@ export default function TopPricing() {
               </span>)}
             </div>
             <Flex justify='center'>
-              {price.priceType === 'Enterprise' && <Button className='ct-btn' style={{ margin: '15px 0', height: 40, width: 150, fontSize: 18 }} onClick={() => "mailto:hello@canvas.space"}>
+              {price.priceType === 'Enterprise' && <Button className='ct-btn' style={{ margin: '15px 0', height: 40, width: 150, fontSize: 18 }} onClick={() => window.open("mailto:hello@canvas.space")}>
                 Contact Us
               </Button>}
             </Flex>
