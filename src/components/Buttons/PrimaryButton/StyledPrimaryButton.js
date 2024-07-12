@@ -1,4 +1,3 @@
-/* eslint-disable sonarjs/no-nested-template-literals */
 import styled from 'styled-components';
 
 const StyledPrimaryButton = styled.section`
@@ -11,8 +10,8 @@ const StyledPrimaryButton = styled.section`
     border: none !important;
     font-size: ${({ theme }) => theme.FONT_SIZES.EXTRA_SMALL_F};
     ${props =>
-      props.customStyle == 'small' &&
-      `
+    props.customStyle == 'small' &&
+    `
       font-size: 1.125rem;
       font-size: 1rem;
     `}
@@ -22,9 +21,9 @@ const StyledPrimaryButton = styled.section`
   }
   & .ant-btn-primary[disabled] {
     background: ${({ theme }) =>
-      theme.BACKGROUND_COLORS.SECONDARY_1} !important;
+    theme.BACKGROUND_COLORS.SECONDARY_1} !important;
     border-color: ${({ theme }) =>
-      theme.BACKGROUND_COLORS.SECONDARY_2} !important;
+    theme.BACKGROUND_COLORS.SECONDARY_2} !important;
   }
 
   & .anticon-plus {

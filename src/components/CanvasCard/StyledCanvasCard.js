@@ -1,4 +1,3 @@
-/* eslint-disable sonarjs/no-nested-template-literals */
 import styled from 'styled-components';
 
 export const StyledCanvasCard = styled.section`

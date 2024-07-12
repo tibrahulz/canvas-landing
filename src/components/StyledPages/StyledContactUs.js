@@ -63,9 +63,8 @@ export const StyledContactUs = styled.section`
     font-weight: 500;
     line-height: 1.063rem;
     ${props =>
-      props.marginTop &&
-      // eslint-disable-next-line sonarjs/no-nested-template-literals
-      `
+    props.marginTop &&
+    `
       margin-top: 1.2rem;
     `}
   }
