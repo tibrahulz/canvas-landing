@@ -20,15 +20,8 @@ const LandingHeader = () => {
 
   const [current, setCurrent] = useState('');
   const [isModalOpen, setIsModalOpen] = useState(false);
-  // const
-
-  const navigateTo = (path) => {
-    console.log(path);
-    router.push(path)
-  }
 
   const onClick = (e) => {
-    // console.log(e.target.value)
     setCurrent(e.key);
   };
 
@@ -108,7 +101,7 @@ const LandingHeader = () => {
         />
         <Flex align='center' style={{ paddingRight: 40 }}>
           {menu}
-          <Button type="primary" style={{ color: '#fff', height: 40, minWidth: 150, fontSize: '16px' }}
+          <Button type="primary" style={{ color: '#fff', height: 40, minWidth: 150 }}
             onClick={() => setIsModalOpen(true)}>Get Early Access</Button>
         </Flex>
         <EarlyAccess setIsModalOpen={setIsModalOpen} isModalOpen={isModalOpen} />

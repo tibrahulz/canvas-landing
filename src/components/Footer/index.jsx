@@ -6,6 +6,8 @@ import { FaXTwitter } from "react-icons/fa6";
 import { SiYoutubemusic } from "react-icons/si";
 import EarlyAccess from '../EarlyAccess';
 import { useResponsive } from '../../hooks/useResponsive';
+import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 const footerInfo = {
   // navList: [
@@ -23,6 +25,7 @@ const footerInfo = {
   // customClassName: '',
   // footer_logo,
   // subDomain: false,
+  termsOfUse: 'https://drive.google.com/file/d/1eiNbNjT0eSofdUyvLulrfy6Ov4NrABjn/view',
   facebook: 'https://www.facebook.com/canvsspace/',
   twitter: 'https://x.com/CanvasSpace',
   linkedIn: 'https://www.linkedin.com/company/canvas-space/',
@@ -30,6 +33,8 @@ const footerInfo = {
 }
 
 const Footer = () => {
+  const router = useRouter();
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { isTablet } = useResponsive();
 
@@ -49,16 +54,21 @@ const Footer = () => {
               <div>
                 <h2 style={{ fontSize: '26px', fontWeight: 600, marginBottom: 0, lineHeight: '32px' }}>Get Started for free</h2>
                 {/* <h2 style={{ fontSize: '26px', fontWeight: 600, marginBottom: 0 }}>Get Started for free</h2> */}
-                <li className="menu__item">
-                  <p style={{ marginTop: '10px' }} onClick={() => window.open('https://canvas.space/about')}>About</p>
+                <li className="menu__item" style={{ marginTop: '10px' }} >
+                  <Link className='footer__link' href={'/about'} type=''>{`About`}</Link>
+                  {/* <p style={{ marginTop: '10px' }} onClick={() => router('/about')}>About</p> */}
                 </li>
                 <li className="menu__item">
                   <p style={{ marginTop: '10px' }}>Contact us</p>
                 </li>
-                <li className="menu__item" onClick={() => window.open("https://canvas.space/moonshot")}>
-                  <p style={{ marginTop: '10px' }}>Watch demo</p>
+                <li className="menu__item" style={{ marginTop: '10px' }} >
+                  <Link className='footer__link' href={'/moonshot'} type=''>{`Moonshot`}</Link>
+                  {/* <p style={{ marginTop: '10px' }} onClick={() => router('/about')}>About</p> */}
                 </li>
-                <Button type="primary" style={{ marginTop: '25px', height: 40, minWidth: 150, fontSize: 16 }}
+                {/* <li className="menu__item" onClick={() => window.open("https://canvas.space/moonshot")}>
+                  <p style={{ marginTop: '10px' }}>Moonshot</p>
+                </li> */}
+                <Button type="primary" style={{ marginTop: '25px', height: 40, minWidth: 150 }}
                   onClick={() => setIsModalOpen(true)}>
                   Get Early Access
                 </Button>
@@ -103,11 +113,12 @@ const Footer = () => {
           </Col>
         </Row>
       </div>
+
       <ul className="menu" style={{ marginTop: 25 }}>
-        <li className="menu__item" style={{ marginBottom: 0 }}><a className="menu__link" href="#">Terms & Conditions</a></li>
         <li className="menu__item" style={{ marginBottom: 0 }}><a className="menu__link" href="#">Privacy Policy</a></li>
-        <li className="menu__item" style={{ marginBottom: 0 }}><a className="menu__link" href="#">Terms of Use</a></li>
+        <li className="menu__item" style={{ marginBottom: 0 }}><a className="menu__link" href={footerInfo.termsOfUse}>Terms of Use</a></li>
       </ul>
+
       <p style={{ marginTop: 0 }}>&copy;2024 Canvas Space Inc. All rights reserved</p>
       <EarlyAccess setIsModalOpen={setIsModalOpen} isModalOpen={isModalOpen} />
     </footer>

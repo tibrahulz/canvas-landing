@@ -34,7 +34,7 @@ export default function TopSectionMobile() {
     <div style={{ paddingTop: 64 }}>
       <div ref={container} className={styles.container}>
         <div className={(isDesktop || isTablet) ? styles.header : styles.headerMobile}>
-          <h1 style={{ textAlign: 'center', marginBottom: 7, fontSize: '32px' }}>Unlocking Dynamic Content Interactions</h1>
+          <h1 style={{ textAlign: 'center', marginBottom: 7, fontSize: '28px', fontFamily: 'Nunito' }}>Unlocking Dynamic Content Interactions</h1>
           <h4 style={{ textAlign: 'center', marginTop: 0, fontSize: '20px', fontWeight: 500 }}>Elevate Revenues and Engagement with the Micro Gateway</h4><div style={{ marginTop: 15 }}>
           </div>
         </div>

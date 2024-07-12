@@ -9,7 +9,7 @@ import { LeftOutlined, RightOutlined } from '@ant-design/icons';
 const { Title, Text } = Typography;
 
 const caseStudy = [{
-  id: 2,
+  id: 1,
   title: "Canvas X Music Label, India",
   description: `"Independent artists are using micro gateways to understand audience consumption patterns and identify exciting content peaks with promo codes to engage their community,”Monetizing segments, and unlocking huge value for independent podcasters within the community. Powering a few handpicked shows within the network to gauge reactions and have the creators experience micro engagements and understand their audiences and their listening patterns better"`,
   descFooter: "CEO, Music Label & Studio in India.",
@@ -19,7 +19,7 @@ const caseStudy = [{
   count2Label: "increase in revenue",
   image: MusicImg
 }, {
-  id: 3,
+  id: 2,
   title: "Canvas X Bloggers Community, India",
   description: `"The micro technology helped showcase the untapped potential within specific content segments & help creators earn more through innovative audience engagement."`,
   descFooter: "Head, CEG Bloggers Community (India).",
@@ -29,7 +29,7 @@ const caseStudy = [{
   count2Label: "increase in revenue",
   image: BloggerImg
 }, {
-  id: 1,
+  id: 3,
   title: "Canvas X Podcast Co, India",
   description: `"Monetizing segments, and unlocking huge value for independent podcasters within the community. Powering a few handpicked shows within the network to gauge reactions and have the creators experience micro engagements and understand their audiences and their listening patterns better"`,
   descFooter: "Founder, Podcast Production Company, India",

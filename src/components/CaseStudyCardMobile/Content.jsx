@@ -52,13 +52,13 @@ const Content = ({
         <Divider type='vertical' style={{ height: 'calc(100% - 20px)' }} />
         <Flex vertical={true} flex={1} align='center' justify='flex-start'>
           <div >
-            < Title level={2} className='my-t' style={{
+            < Title level={2} className='my-t my-t-mobile' style={{
               marginBottom: 0, marginTop: 20
             }}>{count1}</Title>
             <Title level={4} style={{ marginTop: 0, fontSize: '20px' }}>
               <b>{count1Label}</b>
             </Title>
-            <Title level={2} className='my-t' style={{ marginBottom: 0, marginTop: 20 }}>{count2}</Title>
+            <Title level={2} className='my-t my-t-mobile' style={{ marginBottom: 0, marginTop: 20 }}>{count2}</Title>
             <Title level={4} style={{ marginTop: 0, fontSize: '20px' }}>
               <b>{count2Label}</b>
             </Title>

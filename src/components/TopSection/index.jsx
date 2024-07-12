@@ -47,12 +47,12 @@ export default function TopSection() {
           <h1 style={{ textAlign: 'center', marginBottom: 7, fontSize: '32px' }}>Unlocking Dynamic Content Interactions</h1>
           <h4 style={{ textAlign: 'center', marginTop: 0, fontSize: '20px', fontWeight: 500 }}>Elevate Revenues and Engagement with the Micro Gateway</h4><div style={{ marginTop: 15 }}>
             <Button type="primary"
-              style={{ color: '#fff', height: 40, minWidth: 150, fontSize: 16 }}
+              style={{ color: '#fff', height: 40, minWidth: 150 }}
               onClick={() => setIsModalOpen(true)}>
               Get Early Access
             </Button>
             <Tooltip placement="top" title={`Coming soon...`}>
-              <Button disabled style={{ border: '1px solid #ccc', marginLeft: 20, height: 40, width: 150, fontSize: 16, borderRadius: 5, color: '#777' }}>
+              <Button disabled style={{ border: '1px solid #ccc', marginLeft: 20, height: 40, width: 150, borderRadius: 5, color: '#777' }}>
                 {`Explore API's`}
               </Button>
             </Tooltip>
