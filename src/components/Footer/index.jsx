@@ -115,7 +115,8 @@ const Footer = () => {
       </div>
 
       <ul className="menu" style={{ marginTop: 25 }}>
-        <li className="menu__item" style={{ marginBottom: 0 }}><a className="menu__link" href="#">Privacy Policy</a></li>
+        <li className="menu__item" style={{ marginBottom: 0 }}><a className="menu__link" href="/privacy">Terms & Conditions</a></li>
+        <li className="menu__item" style={{ marginBottom: 0 }}><a className="menu__link" href="/privacy">Privacy Policy</a></li>
         <li className="menu__item" style={{ marginBottom: 0 }}><a className="menu__link" href={footerInfo.termsOfUse}>Terms of Use</a></li>
       </ul>
 

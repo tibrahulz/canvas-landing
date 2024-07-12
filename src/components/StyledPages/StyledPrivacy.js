@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledPrivacy = styled.section`
-  margin-top: 1rem;
+  padding: 70px 10vw 120px;
   li {
     list-style-type: none;
   }
