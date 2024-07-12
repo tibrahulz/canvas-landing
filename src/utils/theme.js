@@ -1,4 +1,3 @@
-/* eslint-disable no-dupe-keys */
 export const FONT_COLORS = {
   PRIMARY: '#3968A9',
   TERTIARY_0: '#000000',
@@ -200,7 +199,7 @@ export const GRADIENT = {
 };
 
 const FONT_FAMILY = {
-  
+
 }
 
 const theme = {

@@ -52,27 +52,26 @@ function StudioModal({
 
   function onChangeInput(e) {
     e.target.name === 'fname' ||
-    e.target.name === 'lname' ||
-    e.target.name === 'about' ||
-    e.target.name === 'email'
+      e.target.name === 'lname' ||
+      e.target.name === 'about' ||
+      e.target.name === 'email'
       ? setPreference({
-          ...preference,
-          [e.target.name]: e.target.value,
-          otherInfo: {
-            ...preference.otherInfo
-          }
-        })
+        ...preference,
+        [e.target.name]: e.target.value,
+        otherInfo: {
+          ...preference.otherInfo
+        }
+      })
       : setPreference({
-          ...preference,
-          otherInfo: {
-            ...preference.otherInfo,
-            [e.target.name]: e.target.value
-          }
-        });
+        ...preference,
+        otherInfo: {
+          ...preference.otherInfo,
+          [e.target.name]: e.target.value
+        }
+      });
   }
 
   function onOptionChangeCountries(country) {
-    // eslint-disable-next-line no-console
     return setPreference({
       ...preference,
       otherInfo: {
@@ -97,7 +96,6 @@ function StudioModal({
       // loads document properties and worksheets
       await doc.loadInfo();
 
-      // eslint-disable-next-line security/detect-object-injection
       const sheet = doc.sheetsById[LETS_CONNECT_SHEET_ID];
       await sheet.addRow(row);
 
@@ -149,12 +147,12 @@ function StudioModal({
 
   useEffect(() => {
     preference?.fname?.length !== 0 &&
-    preference?.lname?.length !== 0 &&
-    preference?.otherInfo?.companyName !== 0 &&
-    preference?.email?.length !== 0 &&
-    emailIdValid
+      preference?.lname?.length !== 0 &&
+      preference?.otherInfo?.companyName !== 0 &&
+      preference?.email?.length !== 0 &&
+      emailIdValid
       ? // preference?.otherInfo?.website?.length !== 0
-        setSubmitBtnActive(true)
+      setSubmitBtnActive(true)
       : setSubmitBtnActive(false);
   }, [preference]);
   return (
