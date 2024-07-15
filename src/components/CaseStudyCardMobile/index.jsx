@@ -28,16 +28,6 @@ const caseStudy = [{
   count2: "15%",
   count2Label: "increase in revenue",
   image: BloggerImg
-}, {
-  id: 3,
-  title: "Canvas X Podcast Co, India",
-  description: `"Monetizing segments, and unlocking huge value for independent podcasters within the community. Powering a few handpicked shows within the network to gauge reactions and have the creators experience micro engagements and understand their audiences and their listening patterns better"`,
-  descFooter: "Founder, Podcast Production Company, India",
-  count1: "80+",
-  count1Label: "Shows",
-  count2: "50+",
-  count2Label: "increase in interactions",
-  image: PodCastImg
 }]
 
 const CaseStudyCardMobile = () => {
