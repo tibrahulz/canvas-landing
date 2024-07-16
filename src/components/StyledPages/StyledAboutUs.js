@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 export const AboutPage = styled.section`
+  padding: 70px 10vw 100px;
   .navBackground {
     /* height: 81px; */
     width: 100%;
@@ -45,7 +46,6 @@ export const AboutPage = styled.section`
     /* width: 100%; */
   }
   .section-AboutUs {
-    padding: 70px 0 100px;
     z-index: 1;
     .navBackground {
       height: 81px;
@@ -64,6 +64,16 @@ export const AboutPage = styled.section`
         border-bottom: 2px solid #cccccc;
       }
     } */
+    .title {
+      font-size: ${({ theme }) => theme.FONT_SIZES.SMALL_C};
+      padding-bottom: ${({ theme }) => theme.SPACING.EXTRA_SMALL_C};
+      border-bottom: 0.094rem solid
+        ${({ theme }) => theme.BACKGROUND_COLORS.LIGHT_GREY};
+      line-height: 1.813rem;
+      font-weight: 500;
+      margin-bottom: ${({ theme }) => theme.SPACING.SMALL_C};
+    }
+
   }
   .heroSection {
     background: ${({ theme }) => theme.BACKGROUND_COLORS.WHITE} !important;

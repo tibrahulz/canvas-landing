@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledFaqsPage = styled.section`
-  margin-top: 10rem;
+  padding: 70px 10vw 120px;
   .title {
     font-size: ${({ theme }) => theme.FONT_SIZES.SMALL_C};
     padding-bottom: ${({ theme }) => theme.SPACING.EXTRA_SMALL_C};

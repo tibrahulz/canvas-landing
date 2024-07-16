@@ -48,6 +48,11 @@ const LandingHeader = () => {
         </div>
       ),
     },
+    {
+      label: 'FAQ',
+      key: 'faq',
+      url: '/faqs'
+    }
   ];
 
   const menu = (<Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" style={{

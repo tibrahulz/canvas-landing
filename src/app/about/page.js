@@ -181,8 +181,8 @@ function About() {
       {/* <StaticPageLayout contentClassName="w-100vw"> */}
       <ThemeProvider theme={theme}>
         <AboutPage>
-          <div className="navBackground"></div>
           <section className="section-AboutUs">
+            <h2 className="title">About Us</h2>
             <div className="heroSection">
               {/* <div className="heading w-80vw">
                 <h2>About</h2>
